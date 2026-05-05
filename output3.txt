@@ -1,0 +1,34 @@
+    const fetchOpts = {};
+if (link.integrity) fetchOpts.integrity = lin
+ink.referrerPolicy) fetchOpts.referrerPolicy 
+      fetchOpts.credentials = "
+in === "anonymous") fetchOpts.credentials = "
+    else fetchOpts.credentials = "
+    return fetchOpts;
+    const fetchOpts = getFetchOpts(
+    fetch(link.href, fetchOpt
+tDom_development.prefetchDNS = function(href)
+       "ReactDOM.prefetchDNS(): Expected the 
+       "ReactDOM.prefetchDNS(): Expected only
+calling ReactDOM.prefetchDNS() with just a si
+       "ReactDOM.prefetchDNS(): Expected only
+calling ReactDOM.prefetchDNS() with just a si
+integrity : void 0, fetchPriority = "string" 
+=== typeof options.fetchPriority ? options.f
+            fetchPriority
+          fetchPriority,
+          fetchPriority: "string" =
+== typeof options.fetchPriority ? options.f
+(). If you meant to fetch data or run side-ef
+{\n  async function fetchData() {\n    // You
+n    // ...\n  }\n  fetchData();\n}, [someId]
+arn more about data fetching with Hooks: http
+dev/link/hooks-data-fetching" : " You returne
+      fetchpriority: "fetchPrio
+ils.\n\n* Move data fetching code or side eff
+ils.\n\n* Move data fetching code or side eff
+ils.\n\n* Move data fetching code or side eff
+ils.\n\n* Move data fetching code or side eff
+reconnectAs("dns-prefetch", href, null);
+ Multi-platform job fetching (LinkedIn, Indee
+rm where recruiters fetch specific job postin
