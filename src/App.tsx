@@ -1,4 +1,3 @@
-
 import mohanImg from './assets/images/mohan.png';
 import callAnalysisImg from './assets/images/call-analysis.png';
 import triggeringCallImg from './assets/images/triggering-call.png';
@@ -13,6 +12,8 @@ import jobsImg from './assets/images/jobs.png';
 import atsImg from './assets/images/ats.png';
 import applicationsImg from './assets/images/applications.png';
 import messagingImg from './assets/images/messaging.png';
+
+
 import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { 
