@@ -555,16 +555,16 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
   return (
     <AnimatePresence>
       <motion.div 
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        exit={{ opacity: 1 }}
         className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-navy-950/90 backdrop-blur-md"
         onClick={onClose}
       >
         <motion.div 
-          initial={{ scale: 0.95, opacity: 0, y: 20 }}
+          initial={{ scale: 0.95, opacity: 1, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0.95, opacity: 0, y: 20 }}
+          exit={{ scale: 0.95, opacity: 1, y: 20 }}
           onClick={(e) => e.stopPropagation()}
           className="bg-navy-900 border border-white/10 rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col shadow-2xl"
           style={{ borderTop: `4px solid ${project.color}` }}
@@ -793,9 +793,9 @@ export default function App() {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div 
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 1, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              exit={{ opacity: 1, y: -20 }}
               className="absolute top-20 left-0 w-full bg-navy-900 border-b border-blue-brand/20 p-6 md:hidden flex flex-col gap-4"
             >
               {['About', 'Stack', 'Experience', 'Projects', 'Contact'].map((item) => (
@@ -827,7 +827,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center relative z-10 w-full">
           <div className="md:col-span-7 space-y-8">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full card-glass border-blue-brand/40"
             >
@@ -837,7 +837,7 @@ export default function App() {
 
             <div className="space-y-4">
               <motion.h1 
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 1, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
                 className="text-6xl md:text-[80px] font-syne font-extrabold tracking-tighter text-white"
@@ -846,7 +846,7 @@ export default function App() {
                 Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-br from-white to-blue-400"><TypewriterText text="Mohan" /></span>
               </motion.h1>
               <motion.h2 
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 1, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 className="text-3xl md:text-[42px] font-syne font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-brand to-cyan-brand"
@@ -854,7 +854,7 @@ export default function App() {
                 Agentic AI Engineer
               </motion.h2>
               <motion.p 
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 1, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
                 className="max-w-xl text-text-secondary text-lg leading-relaxed"
@@ -864,7 +864,7 @@ export default function App() {
             </div>
 
             <motion.div 
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 1, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="flex flex-wrap gap-4"
@@ -890,7 +890,7 @@ export default function App() {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 1, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-6 pt-4"
@@ -909,7 +909,7 @@ export default function App() {
           </div>
 
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 1, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
             className="md:col-span-5 flex justify-center"
@@ -1036,7 +1036,7 @@ export default function App() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
                 variants={{
-                  hidden: { opacity: 0, y: 30 },
+                  hidden: { opacity: 1, y: 30 },
                   visible: { 
                     opacity: 1, 
                     y: 0, 
@@ -1057,7 +1057,7 @@ export default function App() {
                       <motion.div 
                         key={skillName} 
                         variants={{
-                          hidden: { opacity: 0, scale: 0.8 },
+                          hidden: { opacity: 1, scale: 0.8 },
                           visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200, damping: 10 } }
                         }}
                         whileHover={{ scale: 1.05, y: -2, zIndex: 10, borderColor: "rgba(37, 99, 235, 0.5)", backgroundColor: "rgba(37, 99, 235, 0.1)", boxShadow: "0 10px 25px -5px rgba(37, 99, 235, 0.3)" }}
@@ -1094,7 +1094,7 @@ export default function App() {
               
               <motion.div 
                 whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 1, x: 20 }}
                 className="card-glass p-8 rounded-3xl space-y-6"
               >
                 <div className="flex flex-wrap justify-between items-start gap-4">
@@ -1145,7 +1145,7 @@ export default function App() {
               
               <motion.div 
                 whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 1, x: 20 }}
                 className="card-glass p-8 rounded-3xl space-y-6"
               >
                 <div className="flex flex-wrap justify-between items-start gap-4">
@@ -1215,9 +1215,9 @@ export default function App() {
                 <motion.div 
                   key={project.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 1, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
+                  exit={{ opacity: 1, scale: 0.9 }}
                   whileHover={{ y: -6, boxShadow: "0 0 40px rgba(37, 99, 235, 0.2)" }}
                   className="card-glass rounded-3xl relative border-t-4 overflow-hidden flex flex-col group cursor-pointer"
                   style={{ borderTopColor: project.color }}
