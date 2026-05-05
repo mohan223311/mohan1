@@ -746,9 +746,8 @@ export default function App() {
             className="w-32 h-32 rounded-full object-cover border-4 border-blue-brand shadow-[0_0_40px_rgba(37,99,235,0.4)]"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              if (target.src !== 'https://avatars.githubusercontent.com/u/1012108') {
-                 target.src = 'https://avatars.githubusercontent.com/u/1012108';
-              }
+              target.onerror = null;
+              target.src = 'https://avatars.githubusercontent.com/u/1012108';
             }}
           />
           <div className="text-center space-y-2">
@@ -768,7 +767,7 @@ export default function App() {
         className={`fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-300 rounded-full px-4 sm:px-6 flex items-center justify-between h-16 border ${isScrolled ? 'border-blue-brand/20 backdrop-blur-md shadow-lg shadow-blue-brand/5' : 'border-transparent'}`}
       >
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src="/mohan.png" alt="Mohan" className="w-10 h-10 rounded-full object-cover border-2 border-blue-brand" onError={(e) => { const target = e.target as HTMLImageElement; if (target.src !== 'https://avatars.githubusercontent.com/u/1012108') { target.src = 'https://avatars.githubusercontent.com/u/1012108'; } }} />
+          <img src="/mohan.png" alt="Mohan" className="w-10 h-10 rounded-full object-cover border-2 border-blue-brand" onError={(e) => { const target = e.target as HTMLImageElement; target.onerror = null; target.src = 'https://avatars.githubusercontent.com/u/1012108'; }} />
           <span className="font-syne font-bold text-white text-lg hidden sm:block">Mohan</span>
         </div>
 
@@ -939,9 +938,8 @@ export default function App() {
                   alt="Mohan" 
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    if (target.src !== 'https://avatars.githubusercontent.com/u/1012108') {
-                       target.src = 'https://avatars.githubusercontent.com/u/1012108'; // fallback
-                    }
+                    target.onerror = null;
+                    target.src = 'https://avatars.githubusercontent.com/u/1012108';
                   }}
                   className="w-full h-full object-cover transition-all duration-700 hover:scale-105" 
                 />
@@ -1543,7 +1541,7 @@ export default function App() {
       <footer className="py-20 bg-navy-950 border-t border-blue-brand/10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center space-y-12">
           <div className="flex flex-col items-center space-y-4">
-            <img src="/mohan.png" alt="Mohan" className="w-16 h-16 rounded-full object-cover border-2 border-blue-brand" onError={(e) => { const target = e.target as HTMLImageElement; if (target.src !== 'https://avatars.githubusercontent.com/u/1012108') { target.src = 'https://avatars.githubusercontent.com/u/1012108'; } }} />
+            <img src="/mohan.png" alt="Mohan" className="w-16 h-16 rounded-full object-cover border-2 border-blue-brand" onError={(e) => { const target = e.target as HTMLImageElement; target.onerror = null; target.src = 'https://avatars.githubusercontent.com/u/1012108'; }} />
             <div className="flex flex-col items-center">
               <h2 className="text-3xl font-syne font-bold">Mohan</h2>
               <p className="text-text-secondary mt-1">Agentic AI Engineer</p>
