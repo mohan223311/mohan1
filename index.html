@@ -20,6 +20,11 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        document.getElementById('root').innerHTML = '<div style="color:red; background:black; padding:20px 10px;">GLOBAL JS ERROR: ' + e.message + '<br>' + e.filename + ':' + e.lineno + '<br><pre>' + (e.error ? e.error.stack : '') + '</pre></div>';
+      });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

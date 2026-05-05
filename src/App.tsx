@@ -747,29 +747,6 @@ export default function App() {
     ? PROJECTS 
     : PROJECTS.filter(p => p.category.includes(activeFilter));
 
-  if (loading) {
-    return (
-      <div className="fixed inset-0 bg-navy-950 z-[100] flex items-center justify-center">
-        <motion.div 
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-center gap-6"
-        >
-          <img 
-            src={mohanImg} 
-            alt="Mohan" 
-            className="w-32 h-32 rounded-full object-cover border-4 border-blue-brand shadow-[0_0_40px_rgba(37,99,235,0.4)]"
-          />
-          <div className="text-center space-y-2">
-            <h1 className="text-4xl font-syne font-bold text-white tracking-wider">Mohan</h1>
-            <p className="text-blue-brand font-mono uppercase tracking-widest text-sm">Agentic AI Engineer</p>
-          </div>
-        </motion.div>
-      </div>
-    );
-  }
-
   return (
     <div className="relative min-h-screen">
       {/* --- Navbar --- */}
