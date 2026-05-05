@@ -34,7 +34,7 @@ const PROJECTS = [
     metric: "Zero manual SDR",
     tags: ["Retell AI", "n8n", "GoHighLevel", "Twilio", "OpenAI"],
     color: "#06b6d4",
-    image: "/triggering-call.png",
+    image: "./triggering-call.png",
     details: {
       capabilities: [
         "Lead fills out a marketing form → AI voice agent calls them within seconds",
@@ -61,32 +61,32 @@ const PROJECTS = [
         {
           name: "Call Analysis — n8n Workflow",
           description: "After every voice call ends, this workflow fires automatically. It pulls the full call transcript, runs it through GPT-4o for sentiment analysis, lead qualification scoring, and intent detection. Results are parsed and written back to the GHL CRM contact record and appended to the lead tracking sheet.",
-          image: "/call-analysis.png"
+          image: "./call-analysis.png"
         },
         {
           name: "Triggering Call Workflow — n8n",
           description: "When a lead submits the marketing form, this fires via webhook. It processes lead data, checks for existing contacts in GHL, waits, then fires the Retell AI voice call via REST API. Simultaneously sends an intro SMS via Twilio. Also handles callback scheduling via JS calculations.",
-          image: "/triggering-call.png"
+          image: "./triggering-call.png"
         },
         {
           name: "Daily Lead Followup Calling System — n8n",
           description: "Scheduled workflow runs daily, manages 7-day follow-up cadence automatically. Reads leads from tracking sheet, segments by follow-up day (1-7), retrieves GHL contact ID, and triggers follow-up voice call via Retell AI. A Switch node handles day-based routing logic.",
-          image: "/daily-lead-followup.png"
+          image: "./daily-lead-followup.png"
         },
         {
           name: "Appointment GHL — Retell AI ↔ GHL Calendar",
           description: "Core appointment engine. When the voice agent needs to book/reschedule, it calls this webhook in real-time. Workflow checks calendar availability via GHL API, manages slot alternatives, creates/updates appointment & contact, yielding a rapid success/fail signal.",
-          image: "/appointment-ghl.png"
+          image: "./appointment-ghl.png"
         },
         {
           name: "Pipelines Movement for Daily Followup — GHL CRM",
           description: "Called by the daily follow-up system to move leads through the correct GHL CRM pipeline stage based on their day. A Switch node routes to branches (Day 1-7) firing HTTP Requests to the GHL API, ensuring an up-to-date sales view automatically.",
-          image: "/pipelines-movement.png"
+          image: "./pipelines-movement.png"
         },
         {
           name: "Conversational AI Voice Agent — Retell AI",
           description: "The multi-node conversational agent built inside Retell AI, running on GPT-4.1 Fast with Flex Mode. Features dozens of conversation, logic split, and function nodes to fire n8n webhooks in real-time. Global identity prompt dictates qualifying logic & objection handling with 1095–1475ms latency.",
-          image: "/retell-agent.png"
+          image: "./retell-agent.png"
         }
       ]
     }
@@ -99,7 +99,7 @@ const PROJECTS = [
     metric: "Full SaaS",
     tags: ["n8n", "Supabase", "OpenAI", "React.js", "Apify"],
     color: "#F59E0B",
-    image: "/candidate.png",
+    image: "./candidate.png",
     video: "https://drive.google.com/file/d/1kaVo-n34e22QCBq7hYgxdyZm7mEbxgpW/preview",
     details: {
       capabilities: [
@@ -122,37 +122,37 @@ const PROJECTS = [
         {
           name: "Recruiter Dashboard",
           description: "A complete overview for recruiters showing their candidates, active scraped jobs, recent applications and more.",
-          image: "/recuriterd.png"
+          image: "./recuriterd.png"
         },
         {
           name: "Find & Scrape Jobs",
           description: "Multi-platform scraping form where recruiters fetch specific job postings dynamically using Apify via n8n.",
-          image: "/scrapejobs.png"
+          image: "./scrapejobs.png"
         },
         {
           name: "Job Board (Scraped Jobs)",
           description: "Live table and card views of scraped jobs, enabling batch ATS scoring and easy management.",
-          image: "/jobs.png"
+          image: "./jobs.png"
         },
         {
           name: "ATS Analysis",
           description: "Evaluates the candidate's original CV against the job description to provide match scores and identify missing skills. Used as the bedrock for the AI update.",
-          image: "/ats.png"
+          image: "./ats.png"
         },
         {
           name: "Applications Pipeline",
           description: "Visual tracked pipeline grouped chronologically allowing recruiters to monitor candidate statuses at a glance.",
-          image: "/applications.png"
+          image: "./applications.png"
         },
         {
           name: "Candidate Portal",
           description: "Dedicated view for candidates to track application progress, master resumes, and update their profiles.",
-          image: "/candidate.png"
+          image: "./candidate.png"
         },
         {
           name: "Candidate Messaging",
           description: "Direct real-time chat bridging candidates and recruiters straight from within the platform.",
-          image: "/messaging.png"
+          image: "./messaging.png"
         }
       ]
     }
@@ -165,7 +165,7 @@ const PROJECTS = [
     metric: "500+ leads/day",
     tags: ["n8n", "Apollo", "Clay", "Instantly", "OpenAI", "Apify"],
     color: "#2563eb",
-    image: "/call-analysis.png"
+    image: "./call-analysis.png"
   },
   {
     id: 4,
@@ -175,7 +175,7 @@ const PROJECTS = [
     metric: "100% automated",
     tags: ["n8n", "OpenAI", "Airtable", "Perplexity", "Image Gen"],
     color: "#8B5CF6",
-    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2070&auto=format&fit=crop"
+    image: "./call-analysis.png"
   }
 ];
 
@@ -741,7 +741,7 @@ export default function App() {
           className="flex flex-col items-center gap-6"
         >
           <img 
-            src="/mohan.png" 
+            src="./mohan.png" 
             alt="Mohan" 
             className="w-32 h-32 rounded-full object-cover border-4 border-blue-brand shadow-[0_0_40px_rgba(37,99,235,0.4)]"
           />
@@ -762,7 +762,7 @@ export default function App() {
         className={`fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-300 rounded-full px-4 sm:px-6 flex items-center justify-between h-16 border ${isScrolled ? 'border-blue-brand/20 backdrop-blur-md shadow-lg shadow-blue-brand/5' : 'border-transparent'}`}
       >
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src="/mohan.png" alt="Mohan" className="w-10 h-10 rounded-full object-cover border-2 border-blue-brand" />
+          <img src="./mohan.png" alt="Mohan" className="w-10 h-10 rounded-full object-cover border-2 border-blue-brand" />
           <span className="font-syne font-bold text-white text-lg hidden sm:block">Mohan</span>
         </div>
 
@@ -929,7 +929,7 @@ export default function App() {
               <div className="w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full border-2 border-blue-brand shadow-[0_0_50px_rgba(37,99,235,0.3)] overflow-hidden bg-transparent flex items-center justify-center group">
                 {/* The user provided a photo, I'll use a placeholder for now but reference the file name mohan.png as per user prompt context */}
                 <img 
-                  src="/mohan.png" 
+                  src="./mohan.png" 
                   alt="Mohan" 
                   className="w-full h-full object-cover transition-all duration-700 hover:scale-105" 
                 />
@@ -1531,7 +1531,7 @@ export default function App() {
       <footer className="py-20 bg-navy-950 border-t border-blue-brand/10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center space-y-12">
           <div className="flex flex-col items-center space-y-4">
-            <img src="/mohan.png" alt="Mohan" className="w-16 h-16 rounded-full object-cover border-2 border-blue-brand" />
+            <img src="./mohan.png" alt="Mohan" className="w-16 h-16 rounded-full object-cover border-2 border-blue-brand" />
             <div className="flex flex-col items-center">
               <h2 className="text-3xl font-syne font-bold">Mohan</h2>
               <p className="text-text-secondary mt-1">Agentic AI Engineer</p>
